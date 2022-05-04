@@ -80,7 +80,7 @@ border-radius:10px;border:5px solid #464e5f;text-align:center;">
 
 
 def main():
-	# st.title("Capital Commission App")
+	st.title("Capital Commission App")
 	stc.html(custom_title)
 
 	Webforms = ["Expense Category and Cust Life by EG","Override Cust Life by Entity and EG","Record Classification and Catchup Month by Role"]
