@@ -53,34 +53,38 @@ def generate_locale_profile(number,locale,random_seed=200):
 	return df 
 
 
-custom_title = """ Capital Commission App
+custom_title = """ 
 <div style="font-size:40px;font-weight:bolder;background-color:#fff;padding:10px;
 border-radius:10px;border:5px solid #464e5f;text-align:center;">
-		<span style='color:blue'>F</span>
+		<span style='color:blue'>C</span>
 		<span style='color:black'>a</span>
-		<span style='color:black'>k</span>
-		<span style='color:black'>e</span>
-		<span style='color:green'>-</span>
-		<span style='color:blue'>D</span>
+		<span style='color:black'>p</span>
+		<span style='color:black'>i</span>
+		<span style='color:black'>t</span>
 		<span style='color:black'>a</span>
-		<span style='color:blue'>T</span>
-		<span style='color:blue'>a</span>
-		<span style='color:#464e5f'>G</span>
-		<span style='color:red'>e</span>
-		<span style='color:green'>n</span>
-		<span style='color:red'>e</span>
-		<span style='color:black'>r</span>
-		<span style='color:blue'>a</span>
-		<span style='color:green'>t</span>
-		<span style='color:red'>o</span>
-		<span style='color:black'>r</span>
+		<span style='color:black'>l</span>
+		<span style='color:'></span>
+		<span style='color:black'>C</span>
+		<span style='color:black'>o</span>
+		<span style='color:black'>m</span>
+		<span style='color:black'>m</span>
+		<span style='color:black'>i</span>
+		<span style='color:black'>s</span>
+		<span style='color:black'>s</span>
+		<span style='color:black'>i</span>
+		<span style='color:black'>o</span>
+		<span style='color:black'>n</span>
+		<span style='color:'></span>
+		<span style='color:black'>a</span>
+		<span style='color:black'>p</span>
+		<span style='color:black'>p</span>
 		
 </div>
 """
 
 
 def main():
-	st.title("Capital Commission App")
+	#st.title("Capital Commission App")
 	stc.html(custom_title)
 
 	Webforms = ["Expense Category and Cust Life by EG","Override Cust Life by Entity and EG","Record Classification and Catchup Month by Role"]
