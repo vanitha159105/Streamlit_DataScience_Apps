@@ -83,7 +83,7 @@ def main():
 	# st.title("Capital Commission App")
 	stc.html(custom_title)
 
-	Driver Input Webforms = ["Expense Category and Cust Life by EG","Override Cust Life by Entity and EG","Record Classification and Catchup Month by Role"]
+	Webforms = ["Expense Category and Cust Life by EG","Override Cust Life by Entity and EG","Record Classification and Catchup Month by Role"]
 
 	choice = st.sidebar.selectbox("Menu",menu)
 	if choice == "Expense Category and Cust Life by EG":
