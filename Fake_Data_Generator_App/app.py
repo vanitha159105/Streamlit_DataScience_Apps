@@ -64,7 +64,7 @@ border-radius:10px;border:5px solid #464e5f;text-align:center;">
 		<span style='color:black'>a</span>
 		<span style='color:black'>l</span>
 		<span style='color:'></span>
-		<span style='color:black'>C</span>
+		<span style='color:blue'>C</span>
 		<span style='color:black'>o</span>
 		<span style='color:black'>m</span>
 		<span style='color:black'>m</span>
@@ -75,7 +75,7 @@ border-radius:10px;border:5px solid #464e5f;text-align:center;">
 		<span style='color:black'>o</span>
 		<span style='color:black'>n</span>
 		<span style='color:'></span>
-		<span style='color:black'>a</span>
+		<span style='color:blue'>A</span>
 		<span style='color:black'>p</span>
 		<span style='color:black'>p</span>
 		
