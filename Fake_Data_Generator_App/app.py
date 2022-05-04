@@ -53,7 +53,7 @@ def generate_locale_profile(number,locale,random_seed=200):
 	return df 
 
 
-custom_title = """
+custom_title = """ Capital Commission App
 <div style="font-size:40px;font-weight:bolder;background-color:#fff;padding:10px;
 border-radius:10px;border:5px solid #464e5f;text-align:center;">
 		<span style='color:blue'>F</span>
