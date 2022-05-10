@@ -131,21 +131,11 @@ def main():
 		
 
 	else:
-                df = {'Name': ['Asha', 'Harsh', 'Sourav', 'Riya', 'Hritik',
-                    'Shivansh', 'Rohan', 'Akash', 'Soumya', 'Kartik'],
+		index = pd.MultiIndex.from_product([[2013, 2014], [1, 2]],
+                                   names=['year', 'visit'])
+                columns = pd.MultiIndex.from_product([['Bob', 'Guido', 'Sue'], ['HR', 'Temp']],
+                                     names=['subject', 'type'])
 
-           'Department': ['Administration', 'Marketing', 'Technical', 'Technical', 'Marketing',
-                          'Administration', 'Technical', 'Marketing', 'Technical', 'Administration'],
-
-           'Employment Type': ['Full-time Employee', 'Intern', 'Intern', 'Part-time Employee', 'Part-time Employee',
-                               'Full-time Employee', 'Full-time Employee', 'Intern', 'Intern', 'Full-time Employee'],
-
-           'Salary': [120000, 50000, 70000, 70000, 55000,
-                      120000, 125000, 60000, 50000, 120000],
-
-           'Years of Experience': [5, 1, 2, 3, 4,
-                                   7, 6, 2, 1, 6]}
-		df.columns = [['Department'] * len(df.columns),['Group','pred']]
                 
 	       
                
