@@ -86,6 +86,31 @@ border-radius:10px;border:5px solid #464e5f;text-align:center;">
 def main():
 	#st.title("Capital Commission App")
 	stc.html(custom_title)
+	# Define the aggregation calculations
+aggregations = {
+    # work on the "duration" column
+    'duration': { 
+        # get the sum, and call this result 'total_duration'
+        'total_duration': 'sum',  
+        # get mean, call result 'average_duration'
+        'average_duration': 'mean', 
+        'num_calls': 'count'
+    },
+    # Now work on the "date" column
+    'date': {     
+        # Find the max, call the result "max_date" 
+        'max_date': 'max',           
+        'min_date': 'min',
+        # Calculate the date range per group
+        'num_days': lambda x: max(x) - min(x)  
+    },
+     # Calculate two results for the 'network' column with a list
+    'network': ["count", "max"] 
+}
+
+# Perform groupby aggregation by "month", 
+# but only on the rows that are of type "call"
+data[data['item'] == 'call'].groupby('month').agg(aggregations)
 
 	Webforms = ["Expense Category and Cust Life by EG","Override Cust Life by Entity and EG","Record Classification and Catchup Month by Role"]
 
