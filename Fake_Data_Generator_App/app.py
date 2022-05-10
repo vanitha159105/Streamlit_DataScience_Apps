@@ -132,9 +132,9 @@ def main():
 
 	else:
 		# hierarchical indices and columns
-index = pd.MultiIndex.from_product([[2013, 2014], [1, 2]],
+                index = pd.MultiIndex.from_product([[2013, 2014], [1, 2]],
                                    names=['year', 'visit'])
-columns = pd.MultiIndex.from_product([['Bob', 'Guido', 'Sue'], ['HR', 'Temp']],
+                columns = pd.MultiIndex.from_product([['Bob', 'Guido', 'Sue'], ['HR', 'Temp']],
                                      names=['subject', 'type'])
 
 # mock some data
