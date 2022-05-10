@@ -150,7 +150,7 @@ def main():
 
                # View the sum and the average of the numeric features of each group
                groups.aggregate(['mean', 'sum']
-	       df
+	       return df
 	       
                
 
