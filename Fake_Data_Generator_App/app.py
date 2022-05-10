@@ -12,7 +12,7 @@ from faker import Faker
 import base64
 import time 
 timestr = time.strftime("%Y%m%d-%H%M%S")
-df1 = pd.read_csv('phone_data.csv')
+df1 = pd.read_csv("phone_data.csv")
 
 
 # Fxn to Download
