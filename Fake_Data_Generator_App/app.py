@@ -144,12 +144,8 @@ def main():
 		
 
 	else:
-		# Create the data of the DataFrame as a dictionary
-
-
-# Create the DataFrame
-df = pd.DataFrame(data_df)
-df
+                df = pd.DataFrame(data_df)
+                df
 	       
                
 
