@@ -16,10 +16,11 @@ import base64
 import time 
 timestr = time.strftime("%Y%m%d-%H%M%S")
 		# hierarchical indices and columns
-index = pd.MultiIndex.from_product([[EG_RENEWALS_ADVANCE,EG_RENEWAL_RATE],
-                                   names=['year', 'visit'])
-columns = pd.MultiIndex.from_product([['May', 'June'], ['CapVsExp', 'EG_Customer_Life']],
-                                     names=['subject', 'type'])
+index = pd.MultiIndex.from_product([EG_RENEWALS_ADVANCE,EG_RENEWAL_RATE])
+                                   
+columns = pd.MultiIndex.from_product([['May', 'June'], ['CapVsExp', 'EG_Customer_Life']])
+				     
+                                     
 
 # Fxn to Download
 def make_downloadable_df(data):
