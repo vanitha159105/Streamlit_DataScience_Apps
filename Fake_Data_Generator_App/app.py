@@ -15,11 +15,7 @@ from faker import Faker
 import base64
 import time 
 timestr = time.strftime("%Y%m%d-%H%M%S")
-# hierarchical indices and columns
-index = pd.MultiIndex.from_product([[2013, 2014], [1, 2]],
-                                   names=['year', 'visit'])
-columns = pd.MultiIndex.from_product([['Bob', 'Guido', 'Sue'], ['HR', 'Temp']],
-                                     names=['subject', 'type'])
+
 				     
                                      
 
@@ -88,7 +84,11 @@ border-radius:10px;border:5px solid #464e5f;text-align:center;">
 		
 </div>
 """
-
+# hierarchical indices and columns
+index = pd.MultiIndex.from_product([[2013, 2014], [1, 2]],
+                                   names=['year', 'visit'])
+columns = pd.MultiIndex.from_product([['Bob', 'Guido', 'Sue'], ['HR', 'Temp']],
+                                     names=['subject', 'type'])
 
 def main():
 	# st.title("Capital Commission App")
