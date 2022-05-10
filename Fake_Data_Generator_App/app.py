@@ -5,7 +5,7 @@ import streamlit.components.v1 as stc
 
 # Data Pkgs
 import pandas as pd 
-data_df = {'Name': ['Asha', 'Harsh', 'Sourav', 'Riya', 'Hritik',
+df = {'Name': ['Asha', 'Harsh', 'Sourav', 'Riya', 'Hritik',
                     'Shivansh', 'Rohan', 'Akash', 'Soumya', 'Kartik'],
 
            'Department': ['Administration', 'Marketing', 'Technical', 'Technical', 'Marketing',
@@ -144,9 +144,9 @@ def main():
 		
 
 	else:
-                df = pd.DataFrame(data_df)
+               
 		df.columns = [['Department'] * len(df.columns),['Group','pred']]
-                df
+                
 	       
                
 
