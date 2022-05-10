@@ -155,11 +155,6 @@ elif choice == "Customize":
 			make_downloadable_df_format(df,dataformat)
 		
 
-	else:
-		st.subheader("About")
-		st.success("Built with Streamlit")
-		st.info("Jesus Saves @JCharisTech")
-		st.text("By Jesse E.Agbe(JCharis)")
 
 
 
