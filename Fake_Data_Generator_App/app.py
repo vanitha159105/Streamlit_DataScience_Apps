@@ -5,13 +5,6 @@ import streamlit.components.v1 as stc
 
 # Data Pkgs
 import pandas as pd 
-from faker import Faker
-
-
-# Utils
-import base64
-import time 
-timestr = time.strftime("%Y%m%d-%H%M%S")
 data_df = {'Name': ['Asha', 'Harsh', 'Sourav', 'Riya', 'Hritik',
                     'Shivansh', 'Rohan', 'Akash', 'Soumya', 'Kartik'],
 
@@ -26,6 +19,13 @@ data_df = {'Name': ['Asha', 'Harsh', 'Sourav', 'Riya', 'Hritik',
 
            'Years of Experience': [5, 1, 2, 3, 4,
                                    7, 6, 2, 1, 6]}
+from faker import Faker
+
+
+# Utils
+import base64
+import time 
+timestr = time.strftime("%Y%m%d-%H%M%S")
 
 
 # Fxn to Download
@@ -145,7 +145,7 @@ def main():
 	else:
 	       # Create the DataFrame
                df = pd.DataFrame(data_df)
-               return df
+               df
 
 
 
