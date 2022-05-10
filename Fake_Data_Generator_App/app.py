@@ -146,7 +146,7 @@ def main():
 	       # Create the DataFrame
                df = pd.DataFrame(data_df)
                groups = df.groupby(by='Department')
-	       df
+	       
                
 
 
