@@ -145,8 +145,7 @@ def main():
 	else:
 	       # Create the DataFrame
                df = pd.DataFrame(data_df)
-	       df_grouped = df.groupby('Department')
-	       df_grouped.get_group('Technical')
+               groups = df.groupby(by='Department')
 	       df
                
 
