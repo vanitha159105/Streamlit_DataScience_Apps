@@ -144,8 +144,8 @@ def main():
 		
 
 	else:
-                df = pd.read_csv('https://raw.githubusercontent.com/datagy/data/main/sales.csv', parse_dates=['date'])
-                print(df.head())
+                df = pd.DataFrame(data_df)
+                df
 	       
                
 
