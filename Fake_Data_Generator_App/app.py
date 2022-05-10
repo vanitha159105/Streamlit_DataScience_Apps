@@ -129,8 +129,8 @@ def main():
 		
 
 	else:
+	       aggregations = {	
 		
-        aggregations = {
             'duration': { 
         # get the sum, and call this result 'total_duration'
                 'total_duration': 'sum',  
