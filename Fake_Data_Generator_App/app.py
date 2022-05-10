@@ -143,15 +143,13 @@ def main():
 		
 
 	else:
-	       
+	       # Create the DataFrame
+               df = pd.DataFrame(data_df)
+               # Separate the rows into groups that have the same department
+               groups = df.groupby('Department')
 
-# Create the DataFrame
-df = pd.DataFrame(data_df)
-# Separate the rows into groups that have the same department
-groups = df.groupby('Department')
-
-# View the sum and the average of the numeric features of each group
-groups.aggregate(['mean', 'sum'])
+               # View the sum and the average of the numeric features of each group
+               groups.aggregate(['mean', 'sum'])
 
 
 
