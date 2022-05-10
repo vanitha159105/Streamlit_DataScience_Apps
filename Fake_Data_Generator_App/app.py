@@ -130,7 +130,7 @@ def main():
 
 	else:
 		# Define the aggregation calculations
-aggregations = {
+        aggregations = {
     # work on the "duration" column
     'duration': { 
         # get the sum, and call this result 'total_duration'
