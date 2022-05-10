@@ -12,7 +12,7 @@ from faker import Faker
 import base64
 import time 
 timestr = time.strftime("%Y%m%d-%H%M%S")
-df1 = pd.read_csv("phone_data.csv")
+
 
 
 # Fxn to Download
@@ -130,30 +130,28 @@ def main():
 		
 
 	else:
-	       aggregations = {	
-		
-            'duration': { 
-        # get the sum, and call this result 'total_duration'
-                'total_duration': 'sum',  
-        # get mean, call result 'average_duration'
-                'average_duration': 'mean', 
-                'num_calls': 'count'
-    },
-    # Now work on the "date" column
-    'date': {     
-        # Find the max, call the result "max_date" 
-        'max_date': 'max',           
-        'min_date': 'min',
-        # Calculate the date range per group
-        'num_days': lambda x: max(x) - min(x)  
-    },
-     # Calculate two results for the 'network' column with a list
-    'network': ["count", "max"] 
-}
-data = pd.DataFrame.from_csv('phone_data.csv')
-# Perform groupby aggregation by "month", 
-# but only on the rows that are of type "call"
-df1[df1['item'] == 'call'].groupby('month').agg(aggregations)
+	       data_df = {'Name': ['Asha', 'Harsh', 'Sourav', 'Riya', 'Hritik',
+                    'Shivansh', 'Rohan', 'Akash', 'Soumya', 'Kartik'],
+
+           'Department': ['Administration', 'Marketing', 'Technical', 'Technical', 'Marketing',
+                          'Administration', 'Technical', 'Marketing', 'Technical', 'Administration'],
+
+           'Employment Type': ['Full-time Employee', 'Intern', 'Intern', 'Part-time Employee', 'Part-time Employee',
+                               'Full-time Employee', 'Full-time Employee', 'Intern', 'Intern', 'Full-time Employee'],
+
+           'Salary': [120000, 50000, 70000, 70000, 55000,
+                      120000, 125000, 60000, 50000, 120000],
+
+           'Years of Experience': [5, 1, 2, 3, 4,
+                                   7, 6, 2, 1, 6]}
+
+# Create the DataFrame
+df = pd.DataFrame(data_df)
+# Separate the rows into groups that have the same department
+groups = df.groupby('Department')
+
+# View the sum and the average of the numeric features of each group
+groups.aggregate(['mean', 'sum'])
 
 
 
