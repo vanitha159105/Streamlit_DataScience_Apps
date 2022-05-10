@@ -19,6 +19,7 @@ data_df = {'Name': ['Asha', 'Harsh', 'Sourav', 'Riya', 'Hritik',
 
            'Years of Experience': [5, 1, 2, 3, 4,
                                    7, 6, 2, 1, 6]}
+
 from faker import Faker
 
 
@@ -148,9 +149,8 @@ def main():
                # Separate the rows into groups that have the same department
                groups = df.groupby('Department')
 
-               # View the sum and the average of the numeric features of each group
-               groups.aggregate(['mean', 'sum']
-	       return df
+# View only that group whose group key value is 'Technical'
+               print(groups.get_group('Technical'))
 	       
                
 
