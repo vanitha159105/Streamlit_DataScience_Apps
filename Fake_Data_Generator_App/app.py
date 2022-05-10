@@ -129,15 +129,14 @@ def main():
 		
 
 	else:
-		# Define the aggregation calculations
+		
         aggregations = {
-    # work on the "duration" column
-    'duration': { 
+            'duration': { 
         # get the sum, and call this result 'total_duration'
-        'total_duration': 'sum',  
+                'total_duration': 'sum',  
         # get mean, call result 'average_duration'
-        'average_duration': 'mean', 
-        'num_calls': 'count'
+                'average_duration': 'mean', 
+                'num_calls': 'count'
     },
     # Now work on the "date" column
     'date': {     
@@ -154,9 +153,6 @@ def main():
 # Perform groupby aggregation by "month", 
 # but only on the rows that are of type "call"
 data[data['item'] == 'call'].groupby('month').agg(aggregations)
-
-
-
 
 
 
