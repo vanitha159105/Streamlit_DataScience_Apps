@@ -12,7 +12,7 @@ from faker import Faker
 import base64
 import time 
 timestr = time.strftime("%Y%m%d-%H%M%S")
-
+df1 = pd.read_csv('phone_data.csv')
 
 
 # Fxn to Download
@@ -153,7 +153,7 @@ def main():
 data = pd.DataFrame.from_csv('phone_data.csv')
 # Perform groupby aggregation by "month", 
 # but only on the rows that are of type "call"
-data[data['item'] == 'call'].groupby('month').agg(aggregations)
+df1[df1['item'] == 'call'].groupby('month').agg(aggregations)
 
 
 
