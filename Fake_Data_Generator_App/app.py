@@ -110,7 +110,7 @@ aggregations = {
 
 # Perform groupby aggregation by "month", 
 # but only on the rows that are of type "call"
-data[data['item'] == 'call'].groupby('month').agg(aggregations)
+
 
 Webforms = ["Expense Category and Cust Life by EG","Override Cust Life by Entity and EG","Record Classification and Catchup Month by Role"]
 
