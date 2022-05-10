@@ -16,7 +16,7 @@ import base64
 import time 
 timestr = time.strftime("%Y%m%d-%H%M%S")
 		# hierarchical indices and columns
-index = pd.MultiIndex.from_product([EG_RENEWALS_ADVANCE,EG_RENEWAL_RATE])
+index = pd.MultiIndex.from_product([2013,2014])
                                    
 columns = pd.MultiIndex.from_product([['May', 'June'], ['CapVsExp', 'EG_Customer_Life']])
 				     
