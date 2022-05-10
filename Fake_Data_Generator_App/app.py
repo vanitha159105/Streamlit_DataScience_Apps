@@ -146,12 +146,7 @@ def main():
 	else:
 	       # Create the DataFrame
                df = pd.DataFrame(data_df)
-               # Separate the rows into groups that have the same department
-               groups = df.groupby('Department')
-
-# View only that group whose group key value is 'Technical'
-               print(groups.get_group('Technical'))
-	       df
+               df.groupby('key').aggregate(['min', np.median, max])
 	       
                
 
