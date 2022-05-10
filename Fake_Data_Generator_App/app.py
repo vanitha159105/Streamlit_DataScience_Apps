@@ -114,7 +114,7 @@ data[data['item'] == 'call'].groupby('month').agg(aggregations)
 
 Webforms = ["Expense Category and Cust Life by EG","Override Cust Life by Entity and EG","Record Classification and Catchup Month by Role"]
 
-	        choice = st.sidebar.selectbox("Webforms",Webforms)
+choice = st.sidebar.selectbox("Webforms",Webforms)
 	        if choice == "Expense Category and Cust Life by EG":
 		st.subheader("Expense Category and Cust Life by EG")
 		number_to_gen = st.sidebar.number_input("Number",10,10000)
