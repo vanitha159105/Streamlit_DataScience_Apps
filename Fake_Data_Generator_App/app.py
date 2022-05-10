@@ -151,6 +151,7 @@ def main():
 
 # View only that group whose group key value is 'Technical'
                print(groups.get_group('Technical'))
+	       df
 	       
                
 
