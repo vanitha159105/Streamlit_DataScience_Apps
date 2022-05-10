@@ -5,6 +5,7 @@ import streamlit.components.v1 as stc
 
 # Data Pkgs
 import pandas as pd 
+import numpy as np
 
 
 from faker import Faker
