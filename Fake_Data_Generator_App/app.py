@@ -146,7 +146,7 @@ def main():
 	else:
 	       # Create the DataFrame
                df = pd.DataFrame(data_df)
-               df.groupby('key').aggregate(['min', np.median, max])
+               df.groupby('Department').aggregate(['min', np.median, max])
 	       
                
 
