@@ -144,9 +144,11 @@ def main():
 		
 
 	else:
-	       # Create the DataFrame
-               df = pd.DataFrame(data_df)
-               df.groupby('Department').aggregate(['min', 'max'])
+	       df = pd.DataFrame({'key': ['A', 'B', 'C', 'A', 'B', 'C'],
+                   'data1': range(6),
+                   'data2': rng.randint(0, 10, 6)},
+                   columns = ['key', 'data1', 'data2'])
+               df
 	       
                
 
