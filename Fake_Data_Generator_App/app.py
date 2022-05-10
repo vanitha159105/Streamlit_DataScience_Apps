@@ -6,7 +6,11 @@ import streamlit.components.v1 as stc
 # Data Pkgs
 import pandas as pd 
 import numpy as np
+import dash #(version 1.9.1) pip install dash==1.9.1
+import dash_html_components as html
+import dash_table
 
+from collections import OrderedDict
 
 from faker import Faker
 
@@ -16,6 +20,45 @@ import base64
 import time 
 timestr = time.strftime("%Y%m%d-%H%M%S")
 
+df = pd.DataFrame(OrderedDict([
+    ('climate', ['Sunny', 'Snowy', 'Sunny', 'Rainy']),
+    ('temperature', [13, 43, 50, 30]),
+    ('city', ['NYC', 'Montreal', 'Miami', 'NYC'])
+]))
+
+
+app.layout = html.Div([
+    dash_table.DataTable(
+        id='table-dropdown',
+        data=df.to_dict('records'),     #the contents of the table
+        columns=[
+            {'id': 'climate', 'name': 'climate', 'presentation': 'dropdown'},
+            {'id': 'temperature', 'name': 'temperature'},
+            {'id': 'city', 'name': 'city', 'presentation': 'dropdown'},
+        ],
+        editable=True,
+
+        dropdown={                      #dictionary of keys that represent column IDs,
+            'climate': {                #its values are 'options' and 'clearable'
+                'options': [            #'options' represents all rows' data under that column
+                    {'label': i, 'value': i}
+                    for i in df['climate'].unique()
+                ],
+
+                'clearable':True
+            },
+            'city': {
+                'options':[
+                    {'label': 'NYC', 'value': 'NYC'},
+                    {'label': 'Miami', 'value': 'Miami'},
+                    {'label': 'Montreal', 'value': 'Montreal'}
+                ],
+
+                'clearable':False
+            }
+        }
+    ),
+])
 				     
                                      
 
