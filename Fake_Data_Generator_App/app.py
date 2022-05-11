@@ -95,9 +95,9 @@ def main():
 		dataformat = st.sidebar.selectbox("Save Data As",["csv","json"])
 		
 
-		multi_index = pd.MultiIndex.from_tuples([("EG_RENEWALS_EARNINGS"),
-                                       ("EG_RENEWAL_RATE"),("EG_RENEWALS_ADVANCE")],
-                                       names=['Courses','Fee','See'])
+		multi_index = pd.MultiIndex.from_tuples([("EG_RENEWALS_EARNINGS","1"),
+                                       ("EG_RENEWAL_RATE","2"),("EG_RENEWALS_ADVANCE","3")],
+                                       names=['Courses','Fee'])
 		
 		cols = pd.MultiIndex.from_tuples([("April", "CapVsExp"), 
                                   ("April", "EG_Customer_Life"), 
