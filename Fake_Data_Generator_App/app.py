@@ -105,7 +105,7 @@ def main():
 		df = pd.DataFrame(scores, columns = 
                   ['Zone', 'School', 'Name', 
                    'April', 'May'])
-		df_result_zone_school = df.groupby(['Zone','School']).agg(
+		df_result_zone_school = df.groupby(['','']).agg(
     {
         'April':['CapVsExp','EG_Customer_Life'],
         'May':['CapVsExp','EG_Customer_Life']
