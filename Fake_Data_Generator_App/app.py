@@ -109,17 +109,18 @@ def main():
 		locale = st.sidebar.multiselect("Select Locale",localized_providers,default="en_US")
 		dataformat = st.sidebar.selectbox("Save Data As",["csv","json"])
                 
-cols = pd.MultiIndex.from_tuples([("Gasoline", "Toyoto"), 
+		cols = pd.MultiIndex.from_tuples([("Gasoline", "Toyoto"), 
                                   ("Gasoline", "Ford"), 
                                   ("Electric", "Tesla"),
                                   ("Electric", "Nio")])
 
 
-data=[[100,300, 900,400 ], [200,500, 300,600]]
+		data=[[100,300, 900,400 ], [200,500, 300,600]]
 
-df = pd.DataFrame(data, columns=cols,index=multi_index)
-print(df)
-		
+		df = pd.DataFrame(data, columns=cols,index=multi_index)
+		print(df)
+		with st.beta_expander("📩: Download"):
+		make_downloadable_df_format(df,dataformat)
 
 	elif choice == "Override Cust Life by Entity and EG":
 		st.subheader("Override Cust Life by Entity and EG")
