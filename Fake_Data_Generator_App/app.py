@@ -153,10 +153,17 @@ def main():
 		
 
 	else:
-		st.subheader("About")
-		st.success("Built with Streamlit")
-		st.info("Jesus Saves @JCharisTech")
-		st.text("By Jesse E.Agbe(JCharis)")
+		cols = pd.MultiIndex.from_tuples([("Gasoline", "Toyoto"), 
+                                  ("Gasoline", "Ford"), 
+                                  ("Electric", "Tesla"),
+                                  ("Electric", "Nio")])
+
+
+		data=[[100,300, 900,400 ], [200,500, 300,600]]
+
+		df = pd.DataFrame(data, columns=cols,index=multi_index)
+		print(df)
+		
 
 
 
