@@ -6,7 +6,9 @@ import streamlit.components.v1 as stc
 # Data Pkgs
 import pandas as pd 
 import numpy as np
-
+multi_index = pd.MultiIndex.from_tuples([("r0", "rA"),
+                                       ("r1", "rB")],
+                                       names=['Courses','Fee'])
 
 from collections import OrderedDict
 
