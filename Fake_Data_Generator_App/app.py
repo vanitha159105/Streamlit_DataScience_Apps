@@ -109,7 +109,7 @@ def main():
 		locale = st.sidebar.multiselect("Select Locale",localized_providers,default="en_US")
 		dataformat = st.sidebar.selectbox("Save Data As",["csv","json"])
                 
-                 cols = pd.MultiIndex.from_tuples([("Gasoline", "Toyoto"), 
+                cols = pd.MultiIndex.from_tuples([("Gasoline", "Toyoto"), 
                                                    ("Gasoline", "Ford"), 
                                                    ("Electric", "Tesla"),
                                                    ("Electric", "Nio")])
