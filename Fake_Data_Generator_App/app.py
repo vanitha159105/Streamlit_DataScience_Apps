@@ -97,7 +97,7 @@ def main():
 
 		multi_index = pd.MultiIndex.from_tuples([("EG_RENEWALS_EARNINGS"),
                                        ("EG_RENEWAL_RATE"),("EG_RENEWALS_ADVANCE")],
-                                       names=['Courses','Fee'])
+                                       names=['Courses','Fee','See'])
 		
 		cols = pd.MultiIndex.from_tuples([("April", "CapVsExp"), 
                                   ("April", "EG_Customer_Life"), 
