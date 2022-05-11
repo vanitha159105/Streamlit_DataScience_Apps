@@ -162,7 +162,12 @@ def main():
 		df = pd.DataFrame(scores, columns = 
                   ['Zone', 'School', 'Name', 
                    'Science', 'Math'])
-df
+                df_result_zone_school = df.groupby(['Zone','School']).agg(
+    {
+        'Science':['mean','min','max'],
+        'Math':['mean','min','max']
+    })
+df_result_zone_school
 	        
 		
 		
