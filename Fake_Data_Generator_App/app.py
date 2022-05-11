@@ -104,7 +104,7 @@ def main():
                                   ("May", "CapVsExp"),
                                   ("May", "EG_Customer_Life")])
 		
-		data=[[Capital,2,Expense,4], [Capital,0,Expense,2]]
+		data=[[Capital,two,Expense,four], [Capital,zero,Expense,two]]
 
 		df = pd.DataFrame(data, columns=cols,index=multi_index)
 
