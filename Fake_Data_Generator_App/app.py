@@ -153,13 +153,13 @@ def main():
 		
 
 	else:
-		temp = pd.DataFrame({'Year' : [2018,2017],
+	        df = pd.DataFrame({'Year' : [2018,2017],
                'week' : [200, 100],
                'mtd' : [100, 200],
                'qtd' : [300, 345],
                'ytd': [400, 500]})
-temp.set_index('Year', inplace = True)
-print(temp)
+df.set_index('Year', inplace = True)
+print(df)
 		
 		
 
