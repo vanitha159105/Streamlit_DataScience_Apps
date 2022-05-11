@@ -17,7 +17,15 @@ from faker import Faker
 import base64
 import time 
 timestr = time.strftime("%Y%m%d-%H%M%S")
-
+scores = {'Zone': ['North','South','South',
+                   'East','East','West','West','West','West'], 
+          'School': ['Rushmore','Bayside','Rydell',
+                     'Shermer','Shermer','Ridgemont',
+                     'Hogwarts','Hogwarts','North Shore'],             
+          'Name': ['Jonny','Joe','Jakob', 
+                   'Jimmy','Erik','Lam','Yip','Chen','Jim'], 
+          'Math': [78,76,56,67,89,100,55,76,79],
+          'Science': [70,68,90,45,66,89,32,98,70]}
 
 				     
                                      
@@ -151,13 +159,11 @@ def main():
 		
 
 	else:
-	        df1 = pd.DataFrame({'Year' : [2018,2017],
-               'week' : [200, 100],
-               'mtd' : [100, 200],
-               'qtd' : [300, 345],
-               'ytd': [400, 500]})
-df1.stack().to_frame().T
-df1
+		df = pd.DataFrame(scores, columns = 
+                  ['Zone', 'School', 'Name', 
+                   'Science', 'Math'])
+df
+	        
 		
 		
 
