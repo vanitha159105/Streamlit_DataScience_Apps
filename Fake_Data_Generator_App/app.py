@@ -119,10 +119,6 @@ data=[[100,300, 900,400 ], [200,500, 300,600]]
 
 df = pd.DataFrame(data, columns=cols,index=multi_index)
 print(df)
-
-
-	
-		
 		with st.beta_expander("📩: Download"):
 			make_downloadable_df_format(df,dataformat)
 
