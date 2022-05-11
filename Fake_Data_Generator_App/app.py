@@ -113,7 +113,7 @@ def main():
 
 		
 		
-		st.dataframe(df_result_zone_school)
+		st.dataframe(df)
 		with st.beta_expander("📩: Download"):
 			make_downloadable_df_format(df,dataformat)
 
