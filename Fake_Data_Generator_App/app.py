@@ -105,7 +105,7 @@ def main():
 		dataformat = st.sidebar.selectbox("Save Data As",["csv","json"])
                 index = pd.MultiIndex.from_product([[2013, 2014], [1, 2]],
                                    names=['year', 'visit'])
-columns = pd.MultiIndex.from_product([['Bob', 'Guido', 'Sue'], ['HR', 'Temp']],
+                columns = pd.MultiIndex.from_product([['April', 'May', 'June'], ['CapVsExp', 'EG_Customer_Life']],
                                      names=['subject', 'type'])
 		
 		with st.beta_expander("📩: Download"):
