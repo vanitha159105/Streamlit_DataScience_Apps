@@ -153,16 +153,45 @@ def main():
 		
 
 	else:
-		cols = pd.MultiIndex.from_tuples([("Gasoline", "Toyoto"), 
+		
+
+# Create Row Level MultiIndex 
+new_index = pd.MultiIndex.from_tuples([("r0", "rA"),
+                                       ("r1", "rB")],
+                                       names=['indx1','indx2'])
+
+# Create Column Level MultiIndex 
+cols = pd.MultiIndex.from_tuples([("Gasoline", "Toyoto"), 
                                   ("Gasoline", "Ford"), 
                                   ("Electric", "Tesla"),
                                   ("Electric", "Nio")])
 
+# Create MultiIndex DataFrame
+data=[[100,300, 900,400 ], [200,500, 300,600]]
+df = pd.DataFrame(data, columns=cols,index=new_index)
+print(df)
 
-		data=[[100,300, 900,400 ], [200,500, 300,600]]
+# Convert MultiIndex to Columns
+df2=df.reset_index()
+print(df2)
 
-		df = pd.DataFrame(data, columns=cols,index=multi_index)
-		print(df)
+# Convert MuliIndex to Single index
+df2 = df.reset_index(level=[1])
+print(df2)
+
+# Drop Index
+df2 = df.reset_index(level=[1], drop=True)
+print(df2)
+
+# Flattern MultiIndex columns
+df.columns = df.columns.get_level_values(1)
+print(df)
+
+#Drop Index from MultiIndex
+df=df.droplevel(0, axis=0) 
+print(df)
+
+		
 		
 
 
