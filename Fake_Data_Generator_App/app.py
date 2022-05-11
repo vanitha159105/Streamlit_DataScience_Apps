@@ -153,5 +153,5 @@ def main():
 	else:
 
 
-if __name__ == '__main__':
+if__name__ == '__main__':
 	main()
