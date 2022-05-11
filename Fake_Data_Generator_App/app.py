@@ -120,7 +120,7 @@ def main():
 		df = pd.DataFrame(data, columns=cols,index=multi_index)
 		print(df)
 		with st.beta_expander("📩: Download"):
-		make_downloadable_df_format(df,dataformat)
+			make_downloadable_df_format(df,dataformat)
 
 	elif choice == "Override Cust Life by Entity and EG":
 		st.subheader("Override Cust Life by Entity and EG")
