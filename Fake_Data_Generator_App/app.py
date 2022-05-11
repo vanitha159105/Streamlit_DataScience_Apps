@@ -55,49 +55,62 @@ def generate_locale_profile(number,locale,random_seed=200):
 custom_title = """
 <div style="font-size:40px;font-weight:bolder;background-color:#fff;padding:10px;
 border-radius:10px;border:5px solid #464e5f;text-align:center;">
-		<span style='color:blue'>F</span>
+		<span style='color:blue'>C</span>
 		<span style='color:black'>a</span>
-		<span style='color:black'>k</span>
-		<span style='color:black'>e</span>
-		<span style='color:green'>-</span>
-		<span style='color:blue'>D</span>
+		<span style='color:black'>p</span>
+		<span style='color:black'>i</span>
+		<span style='color:black'>t</span>
 		<span style='color:black'>a</span>
-		<span style='color:blue'>T</span>
-		<span style='color:blue'>a</span>
-		<span style='color:#464e5f'>G</span>
-		<span style='color:red'>e</span>
-		<span style='color:green'>n</span>
-		<span style='color:red'>e</span>
-		<span style='color:black'>r</span>
-		<span style='color:blue'>a</span>
-		<span style='color:green'>t</span>
-		<span style='color:red'>o</span>
-		<span style='color:black'>r</span>
+		<span style='color:black'>l</span>
+		<span style='color:blue'>C</span>
+		<span style='color:black'>o</span>
+		<span style='color:black'>m</span>
+		<span style='color:black'>m</span>
+		<span style='color:black'>i</span>
+		<span style='color:black'>s</span>
+		<span style='color:black'>s</span>
+		<span style='color:black'>i</span>
+		<span style='color:black'>o</span>
+		<span style='color:black'>n</span>
+		<span style='color:blue'>A</span>
+		<span style='color:black'>p</span>
+		<span style='color:black'>p</span>
 		
 </div>
 """
 
 
 def main():
-	# st.title("Fake Data Generator")
+	# st.title("Capital Commission App")
 	stc.html(custom_title)
 
-	menu = ["Home","Customize","About"]
+	webforms = ["Expense Category and Cust Life by EG","Override Cust Life by Entity and EG","Record Classification and Catchup Month by Role"]
 
-	choice = st.sidebar.selectbox("Menu",menu)
-	if choice == "Home":
-		st.subheader("Home")
+	choice = st.sidebar.selectbox("Webforms",webforms)
+	if choice == "Expense Category and Cust Life by EG":
+		st.subheader("Expense Category and Cust Life by EG")
 		number_to_gen = st.sidebar.number_input("Number",10,5000)
 		localized_providers = ["ar_AA", "ar_EG", "ar_JO", "ar_PS", "ar_SA", "bg_BG", "bs_BA", "cs_CZ", "de", "de_AT", "de_CH", "de_DE", "dk_DK", "el_CY", "el_GR", "en", "en_AU", "en_CA", "en_GB", "en_IE", "en_IN", "en_NZ", "en_PH", "en_TH", "en_US", "es", "es_CA", "es_ES", "es_MX", "et_EE", "fa_IR", "fi_FI", "fil_PH", "fr_CA", "fr_CH", "fr_FR", "fr_QC", "he_IL", "hi_IN", "hr_HR", "hu_HU", "hy_AM", "id_ID", "it_CH", "it_IT", "ja_JP", "ka_GE", "ko_KR", "la", "lb_LU", "lt_LT", "lv_LV", "mt_MT", "ne_NP", "nl_BE", "nl_NL", "no_NO", "or_IN", "pl_PL", "pt_BR", "pt_PT", "ro_RO", "ru_RU", "sk_SK", "sl_SI", "sv_SE", "ta_IN", "th", "th_TH", "tl_PH", "tr_TR", "tw_GH", "uk_UA", "zh_CN", "zh_TW"]
 		locale = st.sidebar.multiselect("Select Locale",localized_providers,default="en_US")
 		dataformat = st.sidebar.selectbox("Save Data As",["csv","json"])
 
-		df = generate_locale_profile(number_to_gen,locale)
+		scores = {'Zone': ['North','South','South',
+                   'East','East','West','West','West','West'], 
+          'School': ['Rushmore','Bayside','Rydell',
+                     'Shermer','Shermer','Ridgemont',
+                     'Hogwarts','Hogwarts','North Shore'],             
+          'Name': ['Jonny','Joe','Jakob', 
+                   'Jimmy','Erik','Lam','Yip','Chen','Jim'], 
+          'Math': [78,76,56,67,89,100,55,76,79],
+          'Science': [70,68,90,45,66,89,32,98,70]}
+df = pd.DataFrame(scores, columns = 
+                  ['Zone', 'School', 'Name', 
+                   'Science', 'Math'])
 		st.dataframe(df)
 		with st.beta_expander("📩: Download"):
 			make_downloadable_df_format(df,dataformat)
 
-	elif choice == "Customize":
+	elif choice == "Override Cust Life by Entity and EG":
 		st.subheader("Customize Your Fields")
 		# Locale Providers For Faker Class
 		localized_providers = ["ar_AA", "ar_EG", "ar_JO", "ar_PS", "ar_SA", "bg_BG", "bs_BA", "cs_CZ", "de", "de_AT", "de_CH", "de_DE", "dk_DK", "el_CY", "el_GR", "en", "en_AU", "en_CA", "en_GB", "en_IE", "en_IN", "en_NZ", "en_PH", "en_TH", "en_US", "es", "es_CA", "es_ES", "es_MX", "et_EE", "fa_IR", "fi_FI", "fil_PH", "fr_CA", "fr_CH", "fr_FR", "fr_QC", "he_IL", "hi_IN", "hr_HR", "hu_HU", "hy_AM", "id_ID", "it_CH", "it_IT", "ja_JP", "ka_GE", "ko_KR", "la", "lb_LU", "lt_LT", "lv_LV", "mt_MT", "ne_NP", "nl_BE", "nl_NL", "no_NO", "or_IN", "pl_PL", "pt_BR", "pt_PT", "ro_RO", "ru_RU", "sk_SK", "sl_SI", "sv_SE", "ta_IN", "th", "th_TH", "tl_PH", "tr_TR", "tw_GH", "uk_UA", "zh_CN", "zh_TW"]
