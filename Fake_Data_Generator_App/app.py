@@ -137,16 +137,14 @@ def main():
 		df = pd.DataFrame(columns=cols,index=multi_index)
 		st.dataframe(df)
 
-		# View as JSON
-		with st.beta_expander("🔍: View JSON "):
-			st.json(data)
+		
 
 		with st.beta_expander("📩: Download"):
 			make_downloadable_df_format(df,dataformat)
 		
 
-	elif choice == "Override Cust Life by Entity and EG":
-		st.subheader("Override Cust Life by Entity and EG")
+	elif choice == "Record Classification and Catchup Month by Role":
+		st.subheader("Record Classification and Catchup Month by Role")
 		dataformat = st.sidebar.selectbox("Entity",["E_500","E_600"])
 		dataformat = st.sidebar.selectbox("Save Data As",["csv","json"])
 
