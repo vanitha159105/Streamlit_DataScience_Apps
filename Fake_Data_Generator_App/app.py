@@ -104,7 +104,7 @@ def main():
           'April': []}
 		df = pd.DataFrame(scores, columns = 
                   ['Zone', 'School', 'Name', 
-                   'Science', 'Math'])
+                   'April', 'May'])
 		df_result_zone_school = df.groupby(['Zone','School']).agg(
     {
         'April':['CapVsExp','EG_Customer_Life'],
