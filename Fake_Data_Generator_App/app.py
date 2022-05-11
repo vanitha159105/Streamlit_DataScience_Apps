@@ -119,6 +119,7 @@ def main():
 	elif choice == "Override Cust Life by Entity and EG":
 		st.subheader("Override Cust Life by Entity and EG")
 		dataformat = st.sidebar.selectbox("Entity",["E_500","E_600"])
+		dataformat = st.sidebar.selectbox("Fiscal Year",["2021","2022"])
 		dataformat = st.sidebar.selectbox("Save Data As",["csv","json"])
 
 		
@@ -145,28 +146,26 @@ def main():
 
 	elif choice == "Record Classification and Catchup Month by Role":
 		st.subheader("Record Classification and Catchup Month by Role")
-		dataformat = st.sidebar.selectbox("Entity",["E_500","E_600"])
+		dataformat = st.sidebar.selectbox("Fiscal Year",["2021","2022"])
 		dataformat = st.sidebar.selectbox("Save Data As",["csv","json"])
 
 		
 		# View As Dataframe
-		multi_index = pd.MultiIndex.from_tuples([("1","EG_RENEWALS_EARNINGS"),
-                                       ("2","EG_RENEWAL_RATE"),("3","EG_RENEWALS_ADVANCE")],
+		multi_index = pd.MultiIndex.from_tuples([("1","R_AE"),
+                                       ("2","R_BDR"),("3","R_GM")],
                                        names=['Courses','Fee'])
 		
-		cols = pd.MultiIndex.from_tuples([("April", "CapVsExp"), 
-                                  ("April", "EG_Customer_Life"), 
-                                  ("May", "CapVsExp"),
-                                  ("May", "EG_Customer_Life")])
+		cols = pd.MultiIndex.from_tuples([("April", "PooledClassification"), 
+                                  ("April", "PooledCatchup"), 
+                                  ("May", "PooledClassification"),
+                                  ("May", "PooledCatchup")])
 		
 		
 
 		df = pd.DataFrame(columns=cols,index=multi_index)
 		st.dataframe(df)
 
-		# View as JSON
-		with st.beta_expander("🔍: View JSON "):
-			st.json(data)
+		
 
 		with st.beta_expander("📩: Download"):
 			make_downloadable_df_format(df,dataformat)
