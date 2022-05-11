@@ -95,16 +95,16 @@ def main():
 		dataformat = st.sidebar.selectbox("Save Data As",["csv","json"])
 		
 
-		multi_index = pd.MultiIndex.from_tuples([("r0", "rA"),
-                                       ("r1", "rB")],
+		multi_index = pd.MultiIndex.from_tuples([("EG_RENEWALS_EARNINGS"),
+                                       ("EG_RENEWAL_RATE"),("EG_RENEWALS_ADVANCE")],
                                        names=['Courses','Fee'])
 		
-		cols = pd.MultiIndex.from_tuples([("Gasoline", "Toyoto"), 
-                                  ("Gasoline", "Ford"), 
-                                  ("Electric", "Tesla"),
-                                  ("Electric", "Nio")])
+		cols = pd.MultiIndex.from_tuples([("April", "CapVsExp"), 
+                                  ("April", "EG_Customer_Life"), 
+                                  ("May", "CapVsExp"),
+                                  ("May", "EG_Customer_Life")])
 		
-		data=[[100,300, 900,400 ], [200,500, 300,600]]
+		data=[[Capital,2,Expense,4], [Capital,0,Expense,2]]
 
 		df = pd.DataFrame(data, columns=cols,index=multi_index)
 
