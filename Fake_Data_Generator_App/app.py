@@ -151,7 +151,19 @@ def main():
 		
 
 	else:
+		st.subheader("About")
+		st.success("Built with Streamlit")
+		st.info("Jesus Saves @JCharisTech")
+		st.text("By Jesse E.Agbe(JCharis)")
 
 
-if__name__ == '__main__':
+
+
+
+
+
+if __name__ == '__main__':
 	main()
+
+
+
