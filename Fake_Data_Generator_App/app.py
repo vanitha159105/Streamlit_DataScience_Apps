@@ -145,7 +145,34 @@ def main():
 			make_downloadable_df_format(df,dataformat)
 		
 
-	else:
+	elif choice == "Override Cust Life by Entity and EG":
+		st.subheader("Override Cust Life by Entity and EG")
+		dataformat = st.sidebar.selectbox("Entity",["E_500","E_600"])
+		dataformat = st.sidebar.selectbox("Save Data As",["csv","json"])
+
+		
+		# View As Dataframe
+		multi_index = pd.MultiIndex.from_tuples([("1","EG_RENEWALS_EARNINGS"),
+                                       ("2","EG_RENEWAL_RATE"),("3","EG_RENEWALS_ADVANCE")],
+                                       names=['Courses','Fee'])
+		
+		cols = pd.MultiIndex.from_tuples([("April", "CapVsExp"), 
+                                  ("April", "EG_Customer_Life"), 
+                                  ("May", "CapVsExp"),
+                                  ("May", "EG_Customer_Life")])
+		
+		
+
+		df = pd.DataFrame(columns=cols,index=multi_index)
+		st.dataframe(df)
+
+		# View as JSON
+		with st.beta_expander("🔍: View JSON "):
+			st.json(data)
+
+		with st.beta_expander("📩: Download"):
+			make_downloadable_df_format(df,dataformat)
+		
 		
 
 
