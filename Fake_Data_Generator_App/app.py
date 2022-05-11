@@ -103,7 +103,7 @@ def main():
                    'Jimmy','Erik','Lam','Yip','Chen','Jim'], 
           'Math': [78,76,56,67,89,100,55,76,79],
           'Science': [70,68,90,45,66,89,32,98,70]}
-                df = pd.DataFrame(scores, columns = 
+              df = pd.DataFrame(scores, columns = 
                   ['Zone', 'School', 'Name', 
                    'Science', 'Math'])
 		st.dataframe(df)
