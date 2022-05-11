@@ -6,9 +6,7 @@ import streamlit.components.v1 as stc
 # Data Pkgs
 import pandas as pd 
 import numpy as np
-multi_index = pd.MultiIndex.from_tuples([("r0", "rA"),
-                                       ("r1", "rB")],
-                                       names=['Courses','Fee'])
+
 
 from collections import OrderedDict
 
@@ -153,13 +151,13 @@ def main():
 		
 
 	else:
-	        df = pd.DataFrame({'Year' : [2018,2017],
+	        df1 = pd.DataFrame({'Year' : [2018,2017],
                'week' : [200, 100],
                'mtd' : [100, 200],
                'qtd' : [300, 345],
                'ytd': [400, 500]})
-df.stack().to_frame().T
-print(df)
+df1.stack().to_frame().T
+df1
 		
 		
 
