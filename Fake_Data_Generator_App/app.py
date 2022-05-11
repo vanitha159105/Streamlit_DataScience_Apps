@@ -105,7 +105,7 @@ def main():
                                   ("May", "CapVsExp"),
                                   ("May", "EG_Customer_Life")])
 		
-		data=[[my_string,2,y,4], [x,0,y,2]]
+		data=[[,,,], [,,,]]
 
 		df = pd.DataFrame(data, columns=cols,index=multi_index)
 
