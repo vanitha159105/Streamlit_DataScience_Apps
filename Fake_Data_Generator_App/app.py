@@ -105,10 +105,16 @@ def main():
 		df = pd.DataFrame(scores, columns = 
                   ['Zone', 'School', 'Name', 
                    'Science', 'Math'])
+		df_result_zone_school = df.groupby(['Zone','School']).agg(
+    {
+        'Science':['mean','min','max'],
+        'Math':['mean','min','max']
+    })
+
 
 
 		
-		st.dataframe(df)
+		st.dataframe(df_result_zone_school)
 		with st.beta_expander("📩: Download"):
 			make_downloadable_df_format(df,dataformat)
 
