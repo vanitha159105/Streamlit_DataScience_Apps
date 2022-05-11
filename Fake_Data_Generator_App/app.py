@@ -114,10 +114,12 @@ cols = pd.MultiIndex.from_tuples([("Gasoline", "Toyoto"),
                                   ("Electric", "Tesla"),
                                   ("Electric", "Nio")])
 
-			data=[[100,300, 900,400 ], [200,500, 300,600]]
+
+data=[[100,300, 900,400 ], [200,500, 300,600]]
 
 df = pd.DataFrame(data, columns=cols,index=multi_index)
 print(df)
+
 
 	
 		
