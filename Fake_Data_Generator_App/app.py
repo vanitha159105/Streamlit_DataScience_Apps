@@ -99,9 +99,9 @@ def main():
                      '','','',
                      '','',''],             
           'Name': ['Jonny','Joe','Jakob', 
-                   'Jimmy','Erik','Lam','Yip','Chen','Jim'], 
-          'May': [],
-          'April': []}
+                   '','','','','',''], 
+          'May': ['','','','','','','','',''],
+          'April': ['','','','','','','','','']}
 		df = pd.DataFrame(scores, columns = 
                   ['Zone', 'School', 'Name', 
                    'April', 'May'])
