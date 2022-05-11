@@ -153,10 +153,7 @@ def main():
 		
 
 	else:
-		df = pd.DataFrame(np.random.randn(2,3), columns=['a','b','c'])
-		midx = pd.MultiIndex(levels=[['zero', 'one'], ['x','y']], labels=[[1,1,0,],[1,0,1,]])
-                df.columns = midx
-		df
+		
 		
 
 
