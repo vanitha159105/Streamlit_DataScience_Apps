@@ -100,8 +100,8 @@ def main():
                      '','',''],             
           'Name': ['Jonny','Joe','Jakob', 
                    'Jimmy','Erik','Lam','Yip','Chen','Jim'], 
-          'May': [Capital,Expense,Expense],
-          'April': [Capital,Expense,Expense]}
+          'May': [],
+          'April': []}
 		df = pd.DataFrame(scores, columns = 
                   ['Zone', 'School', 'Name', 
                    'Science', 'Math'])
