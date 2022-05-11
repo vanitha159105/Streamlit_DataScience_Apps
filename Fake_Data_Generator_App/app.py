@@ -158,7 +158,7 @@ def main():
                'mtd' : [100, 200],
                'qtd' : [300, 345],
                'ytd': [400, 500]})
-df.set_index('Year', inplace = True)
+df.stack().to_frame().T
 print(df)
 		
 		
